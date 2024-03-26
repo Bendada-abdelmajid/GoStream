@@ -1,0 +1,171 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 11px;
+}
+html::-webkit-scrollbar ,
+.scrollY::-webkit-scrollbar {
+  width: 0px;
+}
+html::-webkit-scrollbar-thumb
+.scrollY::-webkit-scrollbar-thumb {
+  background-color: var(--puetro-rico);
+}
+html,
+.scrollY {
+  scrollbar-color: var(--bg03) transparent;
+  scrollbar-width: none;
+}
+ol {
+  padding-left: 25px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+  object-fit: cover;
+  display: block;
+}
+
+::before,
+::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+select,
+input,
+textarea,
+button {
+  border: none;
+  font-family: 'Chakra Petch', sans-serif;
+  outline: transparent;
+  background: none;
+  color: inherit;
+}
+button {
+cursor: pointer;}
+ul {
+  list-style: none;
+}
+:root {
+  --bg:#0e0b09;
+  --color:#F1EBE5;
+  --red:#e0322c;
+  --yellow:#E2B035;
+  --blue:#375ABC;
+  --g: #EEE3D3;
+  --green:#103425;
+  --bg-black-900: #ffffff;
+  --bg-black-100: #353535;
+  --bg-black-50: #2b2c2f;
+  --text-black-900: #ffffff;
+  --text-black-700: #ffffff;
+  --text-black-600: #bbbbbb;
+
+}
+body {
+  margin: 0;
+  font-family: 'Chakra Petch', sans-serif;
+ 
+  background-color: var(--bg);
+  color: var(--color);
+  font-size: 1.3rem;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden scroll;
+  scrollbar-width: none;
+}
+
+.container {
+ 
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1190px;
+  }
+}
+.App {
+  position: relative;
+  display: flex;
+  height: 100vh;
+
+
+}
+.App::after {
+  content: "";
+  position: fixed;
+  bottom: -98px;
+  left: 0;
+  width: 800px;
+  height: 361px;
+  background: radial-gradient(#5d02047a, #0e150f);
+  border-radius: 50%;
+  transform: translate(-59%, 10%) rotate(0deg) rotateX(29deg);
+  z-index: -1;
+  filter: blur(379px);
+  backface-visibility: hidden;
+}
+.App .dot {
+  position: absolute;
+  top: calc(var(--p) * 2vh);
+  left: calc(var(--p) * 2vw);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--g);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.f-end,
+.center-v,
+.f-start,
+.center,
+.space-b {
+  display: flex;
+  align-items: center;
+}
+.center {
+  justify-content:center;
+}
+.center-v {
+  flex-direction: column;
+  justify-content:center;
+}
+.space-b {
+  justify-content:space-between;
+}
+
+.f-end {
+  justify-content:flex-end;
+}
