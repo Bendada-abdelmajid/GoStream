@@ -14,25 +14,15 @@ const variant = {
     transition: { type: "spring", stiffness: 120 },
   },
 };
-const pathVariant = {
-  initial: {
-    opacity: 0,
-    pathLength: 0,
-  },
-  animate: {
-    opacity: 1,
-    pathLength: 1,
-    transition: { duration: 2, ease: "easeInOut" },
-  },
-};
+
 function Header({ user, setOpenProfile , setOpenLogin}) {
   const [show, setShow] = useState(false);
   return (
-    <header className={`space-b container ${show && "showNav"}`}>
+    <motion.header variants={variant} initial="initial" animate="animate" className={`space-b container ${show && "showNav"}`}>
       <div className="logo f-start">
       <span>G</span>oStream
       </div>
-      <motion.nav variants={variant} initial="initial" animate="animate">
+      <nav >
         <div className="links center">
           <NavLink to={"/"} className="center" onClick={() => setShow(false)}>
             Home
@@ -87,8 +77,8 @@ function Header({ user, setOpenProfile , setOpenLogin}) {
           </Link>
           
         </div>
-      </motion.nav>
-      <motion.div variants={variant} initial="initial" animate="animate" className="f-end">
+      </nav>
+      <div variants={variant} initial="initial" animate="animate" className="f-end">
       {user ? (
            
            <div className="c-img" onClick={() => setOpenProfile(true)} >
@@ -103,8 +93,8 @@ function Header({ user, setOpenProfile , setOpenLogin}) {
         <span></span>
         <span></span>
       </div>
-      </motion.div>
-    </header>
+      </div>
+    </motion.header>
   );
 }
 
