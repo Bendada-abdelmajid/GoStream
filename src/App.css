@@ -1,12 +1,15 @@
 header {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   z-index: 2;
-  padding: 30px 0;
+  width: 100vw;
+
   height: fit-content;
   background: linear-gradient(180deg, var(--bg) 60%, transparent 100%);
+}
+header .container{
+  padding: 30px 15px;
 }
 header .nav-btn {
   min-width: 40px;
@@ -47,7 +50,7 @@ header .nav-btn,
 }
 
 .logo {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -571,18 +574,18 @@ section {
   .links a {
     font-size: 40px;
   }
-  header.showNav .logo svg:first-child {
+  header .showNav .logo svg:first-child {
     transition: 0.3s ease;
   }
-  header.showNav nav {
+  header .showNav nav {
     translate: -50% 0 !important;
     visibility: visible;
   }
-  header.showNav .nav-btn span:first-child {
+  header .showNav .nav-btn span:first-child {
     transform: rotate(45deg);
   }
 
-  header.showNav .nav-btn span:last-child {
+  header .showNav .nav-btn span:last-child {
     transform: rotate(-45deg);
   }
   .card {

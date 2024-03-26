@@ -18,9 +18,10 @@ const variant = {
 function Header({ user, setOpenProfile , setOpenLogin}) {
   const [show, setShow] = useState(false);
   return (
-    <motion.header variants={variant} initial="initial" animate="animate" className={`space-b container ${show && "showNav"}`}>
+    <motion.header variants={variant} initial="initial" animate="animate" >
+      <div className={`space-b container ${show && "showNav"}`}>
       <div className="logo f-start">
-      <span>G</span>oStream
+      <span>Z</span>enithiptv
       </div>
       <nav >
         <div className="links center">
@@ -92,6 +93,7 @@ function Header({ user, setOpenProfile , setOpenLogin}) {
       <div className="nav-btn center" onClick={() => setShow(!show)}>
         <span></span>
         <span></span>
+      </div>
       </div>
       </div>
     </motion.header>
